@@ -12,7 +12,9 @@ import processing.core.PApplet;
  * @author RyansMac
  */
 public class board extends PApplet{
-    int[][] board = new int[3][9];
+    int rows = 9;
+    int cols = 3;
+    actorTwo[][] board = new actorTwo[rows][cols];
     
     public void settings(){
         size(30, 90);
@@ -23,7 +25,13 @@ public class board extends PApplet{
     }
     
     public void setup(){
-        int good = (int) (Math.random() * 3) + 1;
+        for(int row = 0; row < rows; row++){
+            int good = (int) (Math.random() * 3);
+            if (good == 0)
+                board[row][0] = new goodSpace()
+        }
+        
+        
         
         
         

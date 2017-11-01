@@ -13,7 +13,7 @@ import processing.core.PApplet;
  */
 public class actorTwo extends PApplet {
     private boolean isBad;
-    private int line;
+    private int row;
     private int col;
     
     public actorTwo(boolean isBad, int row, int col){
