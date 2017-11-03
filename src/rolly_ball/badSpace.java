@@ -9,15 +9,20 @@ package rolly_ball;
  *
  * @author RyansMac
  */
-public class badSpace extends space{
+public class badSpace extends space implements command{
     private actorTwo doIt;
     private int row;
     private int col;
     
-    public badSpace(actorTwo doIt, int row, int col){
-        this.doIt = doIt;
+    public badSpace(int row, int col){
+        actorTwo bad = new actorTwo(true);
+        doIt = bad;
         this.row = row;
         this.col = col;
+    }
+    
+    public void execute(){
+        doIt.badChangeColor(row, col);
     }
     
     
